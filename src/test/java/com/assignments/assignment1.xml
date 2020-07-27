@@ -1,0 +1,37 @@
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Assignment"  parallel="classes" thread-count="2" > 
+	<test name="TestNG Assignment - Test 1">
+		<parameter name="number1" value="32"></parameter> 
+		<parameter name="number2" value="4"></parameter>
+		<parameter name="number3" value="36"></parameter>
+		
+		<groups>
+			<run>
+				<include name="Basic"></include>
+				<exclude name="Scientific"></exclude>
+			</run>
+		</groups>
+		
+		<classes>
+			<class name="com.assignments.assignment1"></class>
+		</classes>
+	</test>
+	
+	<test name="TestNG Assignment - Test 2">
+		
+		<groups> 
+			<run>
+				<exclude name="Basic"></exclude> 
+				<include name="Scientific"></include> 
+			</run>
+		</groups>
+		
+		<classes>
+			<class name="com.assignments.assignment1"></class>
+		</classes>
+	</test>
+</suite>
+	
+	
+	
